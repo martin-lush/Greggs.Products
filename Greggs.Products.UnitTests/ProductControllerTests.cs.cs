@@ -20,9 +20,9 @@ public class ProductControllerTests
     {
         _productDatabase = new List<Product>()
         {
-            new() { Name = "Sausage Roll", PriceInPounds = 1m },
-            new() { Name = "Vegan Sausage Roll", PriceInPounds = 1.1m },
-            new() { Name = "Steak Bake", PriceInPounds = 1.2m },
+            new() { Name = "Sausage Roll", Price = 1m },
+            new() { Name = "Vegan Sausage Roll", Price = 1.1m },
+            new() { Name = "Steak Bake", Price = 1.2m },
         };
 
         _dataAccess = new Mock<IDataAccess<Product>>();
