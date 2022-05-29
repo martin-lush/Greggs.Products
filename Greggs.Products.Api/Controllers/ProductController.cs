@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Greggs.Products.Api.DataAccess;
+﻿using Greggs.Products.Api.DataAccess;
 using Greggs.Products.Api.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using System.Collections.Generic;
 
 namespace Greggs.Products.Api.Controllers;
 
@@ -24,6 +22,7 @@ public class ProductController : ControllerBase
     [HttpGet]
     public IEnumerable<Product> Get(int pageStart = 0, int pageSize = 5)
     {
+        _logger.LogDebug($"Get: pageStart={pageStart}, pageSize={pageSize}");
         return _dataAccess.List(pageStart, pageSize);
     }
 }
